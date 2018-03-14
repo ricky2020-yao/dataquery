@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<html>
+  <head>
+    </head>
+  <body>
+    <splitlayoutdiv name="divMain" backcolor="empty" dock="fill" layoutstyle="toptobottom" size="400,400" splitterposition="0,40,400,40">
+      <div name="divTop">
+        <button name="Button" font="Arial,16,true,false,false" text="&lt;" location="8,3" size="54,35" />
+        <label name="lblTitle" text="行情" location="70,11" size="68,20" canraiseevents="false" font="Arial,14" />
+      </div>
+      <tabcontrol name="tabMainFrame" backcolor="empty" layout="bottom" selectedindex="1" size="400,400">
+        <tabpage text="自选股" backcolor="empty" headersize="100,40">
+          <usercontrol cid="usersecuritylistt2" name="userSecurityT2" dock="fill"/>
+        </tabpage>
+        <tabpage text="行情" backcolor="empty" headersize="100,40">
+          <splitlayoutdiv name="divQuote" backcolor="empty" layoutstyle="bottomtotop" dock="fill" size="400,400" splitterposition="0,378,400,378">
+            <!--指数栏-->
+            <usercontrol cid="indexdiv" name="divIndex"/>
+            <splitlayoutdiv name="chartdiv" backcolor="empty" layoutstyle="righttoleft" size="400,378" splitterposition="150,0,150,378">
+              <!--实时报价-->
+              <usercontrol cid="latestdiv" name="divLatest"/>
+              <!--K线图-->
+              <usercontrol cid="klinediv" name="divKLine">
+                <!--浮动数据-->
+                <usercontrol cid="floatdiv" name="divFloat" allowdrag="true" location="85,20" size="85,300" visible="false"/>
+              </usercontrol>
+            </splitlayoutdiv>
+          </splitlayoutdiv>
+        </tabpage>
+        <tabpage text="资讯" backcolor="empty" headersize="100,40">
+          <usercontrol cid="newslist" name="divNewsList" dock="fill"/>
+        </tabpage>
+        <tabpage text="金融管家" backcolor="empty" headersize="100,40">
+          <usercontrol cid="aichat" name="divAIChat" dock="fill"/>
+        </tabpage>
+      </tabcontrol>
+    </splitlayoutdiv>
+    <!--右键菜单-->
+    <menu name="rightMenu" popup="true" size="200,225" visible="false">
+      <item text="云自选股">
+        <item name="USERSECURITY_ADD" text="添加到自选股"/>
+        <item name="USERSECURITY_MANAGER" text="自选股管理"/>
+      </item>
+      <item text="云指标">
+        <item name="IND_ADDIND" text="添加主轴指标">
+          <item name="IND_ADDIND_CATEGORY1" text="常用指标"/>
+          <item name="IND_ADDIND_CATEGORY2" text="大势型"/>
+          <item name="IND_ADDIND_CATEGORY3" text="超买超卖型"/>
+          <item name="IND_ADDIND_CATEGORY4" text="趋势型"/>
+          <item name="IND_ADDIND_CATEGORY5" text="能量型"/>
+          <item name="IND_ADDIND_CATEGORY6" text="成交量型"/>
+          <item name="IND_ADDIND_CATEGORY7" text="均线型"/>
+          <item name="IND_ADDIND_CATEGORY8" text="图表型"/>
+          <item name="IND_ADDIND_CATEGORY9" text="路径型"/>
+          <item name="IND_ADDIND_CATEGORY10" text="停损型"/>
+          <item name="IND_ADDIND_CATEGORY11" text="其他类型"/>
+        </item>
+        <item name="IND_ADDVICEIND" text="添加副轴指标">
+          <item name="IND_ADDVICEIND_CATEGORY1" text="常用指标"/>
+          <item name="IND_ADDVICEIND_CATEGORY2" text="大势型"/>
+          <item name="IND_ADDVICEIND_CATEGORY3" text="超买超卖型"/>
+          <item name="IND_ADDVICEIND_CATEGORY4" text="趋势型"/>
+          <item name="IND_ADDVICEIND_CATEGORY5" text="能量型"/>
+          <item name="IND_ADDVICEIND_CATEGORY6" text="成交量型"/>
+          <item name="IND_ADDVICEIND_CATEGORY7" text="均线型"/>
+          <item name="IND_ADDVICEIND_CATEGORY8" text="图表型"/>
+          <item name="IND_ADDVICEIND_CATEGORY9" text="路径型"/>
+          <item name="IND_ADDVICEIND_CATEGORY10" text="停损型"/>
+          <item name="IND_ADDVICEIND_CATEGORY11" text="其他类型"/>
+        </item>
+        <item name="IND_INDICATOREDIT" text="公式编辑"/>
+        <item name="IND_SECURITYFILTER" text="指标选股"/>
+      </item>
+      <item text="主图类型">
+        <item name="CANDLE_STANDARD" checked="true" text="标准"/>
+        <item name="CANDLE_AMERICAN" text="美国线"/>
+        <item name="CANDLE_TOWER" text="宝塔线"/>
+        <item name="CANDLE_CLOSE" text="收盘线"/>
+      </item>
+      <item text="坐标轴类型">
+        <item name="SCALE_STANDARD" text="普通坐标系"/>
+        <item name="SCALE_LOG" text="对数坐标系"/>
+        <item name="SCALE_DIFF" text="等差坐标"/>
+        <item name="SCALE_EQUALRATIO" text="等比坐标"/>
+        <item name="SCALE_DIVIDE" text="等分坐标"/>
+        <item name="SCALE_PERCENT" text="百分比坐标"/>
+        <item name="SCALE_GOLDENRATIO" text="黄金分割坐标"/>
+        <item name="SCALE_REVERSEH" text="翻转横坐标"/>
+        <item name="SCALE_REVERSEV" text="翻转纵坐标"/>
+      </item>
+      <item text="布局">
+        <item name="LAYOUT_ADDBLANKDIV" text="添加空白层"/>
+        <item name="LAYOUT_REMOVEBLANKDIVS" text="移除空白层"/>
+        <item name="LAYOUT_LAYOUTMANAGER" text="布局管理"/>
+      </item>
+      <item text="分析周期">
+        <item name="CYCLE_MINUTELINE" text="分时线"/>
+        <item name="CYCLE_1MINUTE" text="1分钟线"/>
+        <item name="CYCLE_5MINUTE" text="5分钟线"/>
+        <item name="CYCLE_15MINUTE" text="15分钟线"/>
+        <item name="CYCLE_30MINUTE" text="30分钟线"/>
+        <item name="CYCLE_60MINUTE" text="60分钟线"/>
+        <item name="CYCLE_DAY" checked="true" text="日线"/>
+        <item name="CYCLE_WEEK" text="周线"/>
+        <item name="CYCLE_MONTH" text="月线"/>
+      </item>
+      <item text="复权处理">
+        <item name="SUBSCRIPTION_NONE" text="不复权"/>
+        <item name="SUBSCRIPTION_FRONT" checked="true" text="前复权"/>
+        <item name="SUBSCRIPTION_BACK" text="后复权"/>
+      </item>
+      <item text="工具">
+        <item name="ADDPLOT" text="画线工具"/>
+        <item name="TOOLS_CHAT" text="弹幕聊天"/>
+        <item name="TOOLS_SANDBOX" text="沙盘推演"/>
+        <item name="TOOLS_GANNSQUARE" text="江恩正方"/>
+        <item name="TOOLS_EATSNAKE" text="贪吃蛇"/>
+      </item>
+      <item text="命令">
+        <item name="MACRO_MANAGER" text="命令管理"/>
+      </item>
+      <item name="DRAWMODE" text="图形效果" >
+        <item name="DRAWMODE_HIGH" text="优" />
+        <item name="DRAWMODE_LOW" text="差" />
+      </item>
+    </menu>
+    <!--指标的右键菜单-->
+    <menu name="indRightMenu" popup="true" size="200,50" visible="false">
+      <item name="IND_SETPARAMETERS" text="参数设置"/>
+      <item name="IND_DELETEIND" text="删除指标"/>
+    </menu>
+    <!--画线工具的右键菜单-->
+    <menu name="plotRightMenu" popup="true" size="200,25" visible="false">
+      <item name="PLOT_DELETEPLOT" text="删除画线"/>
+    </menu>
+    <!--工具的右键菜单-->
+    <menu name="eatSnakeRightMenu" popup="true" size="200,25" visible="false">
+      <item name="TOOLS_REMOVEEATSNAKE"  text="关闭贪吃蛇"/>
+    </menu>
+    <!--江恩正方的右键菜单-->
+    <menu name="gannSquareRightMenu" popup="true" size="200,25" visible="false">
+      <item name="TOOLS_REMOVEGANNSQUARE"  text="关闭江恩正方"/>
+    </menu>
+    <!--弹幕控件-->
+    <usercontrol cid="barragediv" name="divBarrage" dock="fill" topmost="true"/>
+  </body>
+</html>

@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+  </head>
+  <body>
+    <!--连接设置窗体-->
+    <usercontrol cid="windowex" name="windowConnect" size="470,490" text="设置">
+      <!--多页夹控件-->
+      <tabcontrol name="tabControlMain" backcolor="empty" location="10,30" selectedindex="0" size="448,413">
+        <!--服务器配置页-->
+        <tabpage name="tabConnect" backcolor="empty" text="服务器配置" size="448,381">
+          <!--主服务器标签-->
+          <label name="lblMainServer" text="主服务器" location="27,14" size="63,20" font="Arial,12,bold" />
+          <!--行情服务标签-->
+          <!--交易服务器标签-->
+          <!--主服务器IP地址标签-->
+          <label name="lblMainServerIP" text="IP地址" location="38,48" size="49,20" />
+          <!--主服务器IP地址-->
+          <combobox name="cbMainServerIP" location="88,50" size="156,19" />
+          <!--主服务器端口标签-->
+          <label name="lblMainServerPort" text="端口" location="50,86" size="31,20" />
+          <!--主服务器端口-->
+          <spin name="spinMainServerPort" location="88,87" maximum="1000000" textalign="far" size="154,20" />
+        </tabpage>
+        <!--网络设置页-->
+        <tabpage name="tabProxy" backcolor="empty" text="网络设置" size="448,381">
+          <!--代理类型标签-->
+          <label name="Label" text="    类型：" location="18,27" size="50,20" />
+          <!--代理地址标签-->
+          <label name="Label1" text="地址：" location="175,27" size="34,20" />
+          <!--代理端口标签-->
+          <label name="Label2" text="端口：" location="309,27" size="36,20" />
+          <!--代理用户名标签-->
+          <label name="Label3" text="用户名：" location="18,71" size="50,20" />
+          <!--代理密码标签-->
+          <label name="Label4" text="密码：" location="175,72" size="32,18" />
+          <!--代理域标签-->
+          <label name="Label5" text="    域：" location="309,71" size="34,20" />
+          <!--代理类型下拉框-->
+          <combobox name="cbProxyType" location="68,27" readonly="true" size="104,20">
+            <item text="不使用代理" />
+            <item text="HTTP代理" />
+            <item text="SOCKS5代理" />
+            <item text="使用浏览器设置" />
+          </combobox>
+          <!--代理地址文本框-->
+          <textbox name="txtProxyIP" location="209,27" size="95,20" />
+          <!--代理端口文本框-->
+          <spin name="spinProxyPort" location="346,27" size="77,20" textalign="far" maximum="1000000" />
+          <!--代理用户名文本框-->
+          <textbox name="txtProxyUserName" location="67,71" size="104,20" />
+          <!--代理密码文本框-->
+          <textbox name="txtProxyUserPwd" location="209,72" size="96,20" />
+          <!--代理域文本框-->
+          <textbox name="txtProxyDomain" location="345,72" size="78,20" />
+        </tabpage>
+        <!--服务器资源页-->
+        <tabpage name="tabServer" backcolor="empty" text="服务器资源" size="444,399">
+          <!--服务器列表-->
+          <grid name="gridServers" backcolor="empty" text="Grid1" location="9,10" size="429,257">
+            <columns>
+              <column name="colID" text="ID" visible="false" width="0" />
+              <column name="colIP" text="服务器地址" width="200" />
+              <column name="colPort" text="端口" width="100" />
+              <column name="colType" text="服务器类型" width="100" />
+            </columns>
+          </grid>
+          <!--IP地址标签-->
+          <label name="lblIP" text="IP地址:" location="12,281" size="50,20" />
+          <!--IP地址-->
+          <textbox name="txtIP" location="90,282" size="119,21" />
+          <!--端口标签-->
+          <label name="lblPort" text="端口:" location="219,283" size="38,20" />
+          <!--端口-->
+          <spin name="spinPort" location="267,283" size="100,20" textalign="far" maximum="1000000" />
+          <!--服务器类型-->
+          <combobox name="cbType" location="89,321" readonly="true" size="119,20">
+            <item text="主服务器" />
+          </combobox>
+          <!--服务器类型标签-->
+          <label name="Label12" text="服务器类型:" location="11,321" size="74,20" />
+          <!--增加按钮-->
+          <usercontrol cid="ribbonbutton" name="btnAdd" text="增加" location="38,356" size="100,20" />
+          <!--修改按钮-->
+          <usercontrol cid="ribbonbutton" name="btnUpdate" text="修改" location="165,356" size="100,20" />
+          <!--删除按钮-->
+          <usercontrol cid="ribbonbutton" name="btnDelete" text="删除" location="289,356" size="100,20" />
+        </tabpage>
+      </tabcontrol>
+      <!--保存配置按钮-->
+      <usercontrol cid="ribbonbutton" name="btnSave" text="保存配置" location="10,453" size="95,20" />
+      <!--退出按钮-->
+      <usercontrol cid="ribbonbutton" name="btnCancel" text="退出" location="397,454" size="60,20" />
+    </usercontrol>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+  </head>
+  <body>
+    <!--参数窗体-->
+    <usercontrol cid="windowex" name="windowParameters" size="300,80" location="0,0" text="参数设置">
+      <!--确定按钮-->
+      <usercontrol cid="ribbonbutton" name="btnSubmit" location="113,45" size="79,20" Text="确定" />
+      <!--取消按钮-->
+      <usercontrol cid="ribbonbutton" name="btnCancel" location="201,45" size="79,20" Text="取消" />
+    </usercontrol>
+  </body>
+</html>

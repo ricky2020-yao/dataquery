@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+  </head>
+  <body>
+    <!--股票列表窗体-->
+    <usercontrol cid="windowex"  name="windowSecurity" size="693,364" location="0,0" text="股票列表">
+      <!--待选股票列表表格-->
+      <grid name="gridSelectSecurities" autoellipsis="true" backcolor="empty" gridlinecolor="empty" location="218,55" multiselect="true" showvscrollbar="true" size="210,271">
+        <columns>
+          <column text="股票代码" />
+          <column text="股票名称" />
+        </columns>
+      </grid>
+      <!--确定按钮-->
+      <usercontrol cid="ribbonbutton" name="btnSubmit" location="473,335" size="100,20" text="确定" />
+      <!--取消按钮-->
+      <usercontrol cid="ribbonbutton" name="btnCancel" location="582,335" size="97,20" text="取消" />
+      <!--股票列表表格-->
+      <grid name="gridSecurities" allowdragrow="true" autoellipsis="true" backcolor="empty" gridlinecolor="empty" location="469,55" multiselect="true" size="212,271">
+        <columns>
+          <column text="股票代码" />
+          <column text="股票名称" />
+        </columns>
+      </grid>
+      <!--待选成份列表标签-->
+      <label name="lblSelectSecurities" location="218,32" size="100,20" text="待选成份列表：" />
+      <!--选中股票-->
+      <usercontrol cid="ribbonbutton" name="btnSelectSecurities" location="436,103" size="25,25" text="&gt;" />
+      <!--全选股票-->
+      <usercontrol cid="ribbonbutton" name="btnSelectAllSecurities" location="436,141" size="25,25" text="&gt;&gt;" />
+      <!--取消选中全部股票-->
+      <usercontrol cid="ribbonbutton" name="btnUnSelectAllSecurities" location="436,180" size="25,25" text="&lt;&lt;" />
+      <!--取消选中股票-->
+      <usercontrol cid="ribbonbutton" name="btnUnSelectSecurities" location="436,219" size="25,25" text="&lt;" />
+      <!--板块树-->
+      <tree name="tvBlock" autoellipsis="true" backcolor="empty" location="12,55" size="200,271" headervisible="false">
+        <columns>
+          <column name="colBlockNode1" text="板块节点1" width="10" />
+          <column name="colBlockNode2" text="板块节点2" width="0" />
+          <column name="colBlockNode3" text="板块节点3" width="0" />
+          <column name="colBlockNode4" text="板块节点4" width="0" />
+          <column name="colBlockNode5" text="板块节点5" width="0" />
+          <column name="colBlockNode6" text="板块节点6" width="190" />
+        </columns>
+        <nodes>
+          <node text="沪深股票" font="SimSun,14,Bold" value="1">
+            <node text="市场类" font="SimSun,14,Bold" value="101">
+              <node text="全部A股" value="101001"/>
+              <node text="上证A股" value="101002"/>
+              <node text="深证A股" value="101003"/>
+              <node text="创业板" value="101004"/>
+              <node text="全部B股" value="101005"/>
+              <node text="上证B股" value="101006"/>
+              <node text="深证B股" value="101007"/>
+              <node text="全部AB股" value="101008"/>
+              <node text="上证AB股" value="101009"/>
+              <node text="深证AB股" value="101010"/>
+              <node text="ST" value="101011"/>
+              <node text="*ST" value="101012"/>
+            </node>
+          </node>
+          <node text="指数" font="SimSun,14,Bold" value="905">
+            <node text="指数市场类" font="SimSun,14,Bold" value="905008">
+              <node text="上证系列" value="905008004"/>
+              <node text="深证系列" value="905008038"/>
+            </node>
+          </node>
+          <node text="期货" font="SimSun,14,Bold" value="111">
+            <node text="期货市场类" value="111001">
+              <node text="上期所" value="111001001"/>
+              <node text="郑商所" value="111001002"/>
+              <node text="大商所" value="111001003"/>
+              <node text="中金所" value="111001004"/>
+            </node>
+          </node>
+          <node text="基金" font="SimSun,14,Bold" value="5">
+            <node text="基金市场类" font="SimSun,14,Bold" value="501">
+              <node text="沪上市基金" value="501001"/>
+            </node>
+          </node>
+          <node text="自选股" font="SimSun,14,Bold"/>
+        </nodes>
+      </tree>
+      <!--全部板块标签-->
+      <label name="lblBlock" location="12,32" size="100,20" Text="全部板块" />
+    </usercontrol>
+  </body>
+</html>

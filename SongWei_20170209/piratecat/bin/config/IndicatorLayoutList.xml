@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+  </head>
+  <body>
+    <!--布局管理窗体-->
+    <usercontrol cid="windowex" name="windowILL" size="602,389" text="布局管理" location="0,0">
+      <splitlayoutdiv name="layoutMain" candragsplitter="true" dock="fill" backcolor="empty" margin="7,27,7,7" splitterposition="150,0,155,484">
+        <!--指标组合列表-->
+        <grid name="gridLayouts" autoellipsis="true" backcolor="empty" gridlinecolor="empty" headervisible="false" showhscrollbar="false" size="200,454">
+          <columns>
+            <column name="colLayoutID" text="ID" width="0" />
+            <column name="colLayoutName" text="名称" width="812" />
+          </columns>
+        </grid>
+        <div name="divLayout" backcolor="empty">
+          <!--缩放布局-->
+          <usercontrol cid="layoutscalediv" name="divLayoutScale" location="6,37" size="421,288" />
+          <!--新建按钮-->
+          <usercontrol cid="ribbonbutton" name="btnCreate" location="6,330" size="100,20" text="新建" />
+          <!--删除按钮-->
+          <usercontrol cid="ribbonbutton" name="btnDelete" enabled="false" location="325,330" size="100,20" text="删除" />
+          <!--应用按钮-->
+          <usercontrol cid="ribbonbutton" name="btnApply" enabled="false" location="112,330" size="100,20" text="应用" />
+          <!--保存按钮-->
+          <usercontrol cid="ribbonbutton" name="btnSave" enabled="false" location="218,330" size="100,20" text="保存" />
+          <!--布局名称标签-->
+          <label name="lblLayoutName" location="7,8" size="69,20" Text="布局名称：" />
+          <!--布局名称-->
+          <textbox name="txtLayoutName" location="73,9" size="350,20" />
+        </div>
+      </splitlayoutdiv>
+    </usercontrol>
+  </body>
+</html>

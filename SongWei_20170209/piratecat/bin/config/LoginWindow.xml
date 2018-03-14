@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+  </head>
+  <body>
+    <!--登录窗体-->
+    <usercontrol cid="windowex" name="windowLogin" size="336,187" location="0,0" text="登录">
+      <tabcontrol name="tabLogin" backcolor="empty" location="9,32" selectedindex="0" size="319,118">
+        <!--会员登录页-->
+        <tabpage backcolor="empty" text="会员登录">
+          <label name="Label1" location="19,17" size="60,20" text="邮箱：" />
+          <label name="Label2" location="18,59" size="58,20" text="密码：" />
+          <!--用户名输入框-->
+          <textbox name="txtUserName" location="78,17" size="152,20" />
+          <!--密码输入框-->
+          <textbox name="txtPassword" location="77,60" size="152,20" passwordchar="*" />
+          <!--网络设置链接-->
+          <linklabel name="lblNetSetting" text="网络设置" location="236,19" size="75,18" />
+        </tabpage>
+      </tabcontrol>
+      <!--取消按钮-->
+      <usercontrol cid="ribbonbutton" name="btnCancel" location="243,158" size="79,20" Text="取消" />
+      <!--登录按钮-->
+      <usercontrol cid="ribbonbutton" name="btnLogin" location="151,158" size="79,20" Text="登录" />
+    </usercontrol>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+  </head>
+  <body>
+    <!--聊天窗体-->
+    <usercontrol cid="windowex" name="windowChat" size="500,127" location="0,0" text="弹幕聊天">
+      <!--内容文本框-->
+      <textbox name="txtData" location="10,30" size="480,57" text="" Font="SimSun,30" Height="57" LineHeight="57" />
+      <!--发送按钮-->
+      <usercontrol cid="ribbonbutton" name="btnSend" location="323,97" size="79,20" Text="发送" />
+      <!--取消按钮-->
+      <usercontrol cid="ribbonbutton" name="btnCancel" location="411,97" size="79,20" Text="取消" />
+    </usercontrol>
+  </body>
+</html>

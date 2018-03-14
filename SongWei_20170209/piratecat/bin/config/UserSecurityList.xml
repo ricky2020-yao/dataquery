@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+  </head>
+  <body>
+    <!--自选股窗体-->
+    <usercontrol cid="windowex"  name="windowUS" size="680,356" location="0,0" Text="云自选股">
+      <!--添加类别按钮-->
+      <usercontrol cid="ribbonbutton" name="btnAddCategory" location="9,325" size="100,20" text="添加类别" />
+      <!--添加类别按钮-->
+      <usercontrol cid="ribbonbutton" name="btnDeleteCategory" location="119,325" size="100,20" text="删除类别" />
+      <!--自选股类别表格-->
+      <grid name="gridCategory" autoellipsis="true" backcolor="empty" celleditmode="DoubleClick" gridlinecolor="empty" size="210,270" location="9,50" headervisible="false" showvscrollbar="true">
+        <columns>
+          <column text="自选股ID" visible="false" />
+          <column text="自选股类别" width="210" />
+        </columns>
+      </grid>
+      <!--添加成份按钮-->
+      <usercontrol cid="ribbonbutton" name="btnAddSecurities" location="464,325" size="100,20" text="导入成份" />
+      <!--删除成份按钮-->
+      <usercontrol cid="ribbonbutton" name="btnDeleteSecurities" location="569,325" size="100,20" text="删除成份" />
+      <!--股票列表表格-->
+      <grid name="gridSecurities" autoellipsis="true" backcolor="empty" gridlinecolor="empty" location="269,49" multiselect="true" size="400,271">
+        <columns>
+          <column text="股票代码" />
+          <column text="股票名称" />
+          <column name="colClose" text="最新价" width="60" />
+          <column name="colDiff" text="涨跌" width="60" />
+          <column name="colDiffRange" text="涨跌幅" width="60" />
+        </columns>
+      </grid>
+      <!--自选股类别标签-->
+      <label name="lblCategory" location="9,27" size="100,20" text="自选股类别：" />
+      <!--自选股成份标签-->
+      <label name="lblSecurities" location="268,28" size="100,20" text="自选股成份：" />
+      <!--搜索添加按钮-->
+      <textbox name="txtSearch" location="331,325" size="121,20" />
+      <!--搜索添加标签-->
+      <label name="lblSearch" location="272,325" size="59,20" Text="搜索添加：" />
+    </usercontrol>
+  </body>
+</html>

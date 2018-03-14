@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+  </head>
+  <body>
+    <!--公式编辑窗体-->
+    <usercontrol cid="windowex" name="windowIE" size="772,442" location="1,0" text="云公式编辑">
+      <label name="Label2" location="23,29" size="64,20" text="公式名称：" />
+      <!--公式名称文本框-->
+      <textbox name="txtName" location="87,29" size="96,20" />
+      <!--密码保护复选框-->
+      <checkbox name="cbUsePassword" location="183,29" size="88,20" Text="密码保护：" />
+      <!--密码文本框-->
+      <textbox name="txtPassword" location="272,29" size="100,20" enabled="false" />
+      <label name="Label" location="23,63" size="65,20" text="公式描述：" />
+      <!--公式描述文本框-->
+      <textbox name="txtDescription" location="86,63" size="286,20" />
+      <!--确定按钮-->
+      <usercontrol cid="ribbonbutton" name="btnSave" location="699,51" size="62,20" text="保存" />
+      <!--另存为按钮-->
+      <usercontrol cid="ribbonbutton" name="btnSaveAs" location="699,76" size="62,20" text="另存为" />
+      <!--删除按钮-->
+      <usercontrol cid="ribbonbutton" name="btnDelete" location="699,102" size="62,20" Text="删除" />
+      <!--使用按钮-->
+      <usercontrol cid="ribbonbutton" name="btnSubmit" location="699,27" size="63,20" Text="使用" />
+      <!--取消按钮-->
+      <label name="Label1" location="376,28" size="61,20" text="公式类型：" />
+      <!--公式类型下拉列表-->
+      <combobox name="cbCategory" location="440,28" size="100,20" selectedindex="0">
+        <item text="常用指标" />
+        <item text="大势型" />
+        <item text="超买超卖型" />
+        <item text="趋势型" />
+        <item text="能量型" />
+        <item text="成交量型" />
+        <item text="均线型" />
+        <item text="图表型" />
+        <item text="路径型" />
+        <item text="停损型" />
+        <item text="其他类型" />
+      </combobox>
+      <label name="Label4" location="544,27" size="64,20" text="画线方法：" />
+      <!--画线方法下拉列表-->
+      <combobox name="cbPaintType" location="606,27" size="89,21" selectedindex="0">
+        <item text="主图叠加" />
+        <item text="副图叠加" />
+      </combobox>
+      <label name="Label6" location="375,62" size="63,20" text="公式版本：" />
+      <!--公式版本下拉列表-->
+      <textbox name="txtVersion" location="440,62" size="100,20" />
+      <label name="Label7" location="544,62" size="60,20" text="显示小数：" />
+      <!--小数位数下拉列表-->
+      <combobox name="cbDigit" location="606,63" size="89,20" selectedindex="0">
+        <item text="缺省位数" />
+        <item text="品种小数位数" />
+        <item text="品种小数位数+1" />
+        <item text="固定0位" />
+        <item text="固定1位" />
+        <item text="固定2位" />
+        <item text="固定3位" />
+        <item text="固定4位" />
+      </combobox>
+      <!--参数设置多页夹控件-->
+      <tabcontrol name="tabParameters" backcolor="empty" location="23,94" size="349,134" selectedindex="0">
+        <!--参数1-4-->
+        <tabpage name="TabPage" backcolor="empty" text="参数1-4" headersize="80,20" location="16,20" size="349,114">
+          <label name="Label8" location="29,1" size="33,21" text="参数" />
+          <label name="Label9" location="100,1" size="34,21" text="最小" />
+          <label name="Label10" location="174,0" size="30,20" text="最大" />
+          <label name="Label11" location="245,0" size="35,20" text="缺省" />
+          <label name="Label12" location="10,21" size="23,20" text="1" />
+          <label name="Label13" location="10,45" size="20,20" text="2" />
+          <label name="Label14" location="10,67" size="24,20" text="3" />
+          <label name="Label15" location="10,88" size="19,20" text="4" />
+          <textbox name="txtPN1" location="29,22" size="62,20" />
+          <textbox name="txtPN2" location="29,44" size="62,20" />
+          <textbox name="txtPN3" location="29,66" size="62,20" />
+          <textbox name="txtPN4" location="29,88" size="62,20" />
+          <textbox name="txtPMin1" location="100,22" size="62,20" />
+          <textbox name="txtPMin2" location="100,44" size="62,20" />
+          <textbox name="txtPMin3" location="100,66" size="62,20" />
+          <textbox name="txtPMin4" location="100,89" size="62,20" />
+          <textbox name="txtPMax1" location="173,22" size="62,20" />
+          <textbox name="txtPMax2" location="173,44" size="62,20" />
+          <textbox name="txtPMax3" location="173,66" size="62,20" />
+          <textbox name="txtPMax4" location="173,89" size="62,20" />
+          <textbox name="txtP1" location="246,22" size="62,20" />
+          <textbox name="txtP2" location="246,45" size="62,20" />
+          <textbox name="txtP3" location="246,67" size="62,20" />
+          <textbox name="txtP4" location="246,89" size="62,20" />
+        </tabpage>
+        <!--参数5-8-->
+        <tabpage name="TabPage2" backcolor="empty" text="参数5-8" headersize="80,20">
+          <label name="Label16" location="29,1" size="33,21" text="参数" />
+          <label name="Label17" location="100,1" size="34,21" text="最小" />
+          <label name="Label18" location="174,0" size="30,20" text="最大" />
+          <label name="Label19" location="245,0" size="35,20" text="缺省" />
+          <label name="Label20" location="10,21" size="23,20" text="5" />
+          <label name="Label21" location="10,45" size="20,20" text="6" />
+          <label name="Label22" location="10,67" size="24,20" text="7" />
+          <label name="Label23" location="10,88" size="19,20" text="8" />
+          <textbox name="txtPN5" location="29,22" size="62,20" />
+          <textbox name="txtPN6" location="29,44" size="62,20" />
+          <textbox name="txtPN7" location="29,66" size="62,20" />
+          <textbox name="txtPN8" location="29,88" size="62,20" />
+          <textbox name="txtPMin5" location="100,22" size="62,20" />
+          <textbox name="txtPMin6" location="100,44" size="62,20" />
+          <textbox name="txtPMin7" location="100,66" size="62,20" />
+          <textbox name="txtPMin8" location="100,89" size="62,20" />
+          <textbox name="txtPMax5" location="173,22" size="62,20" />
+          <textbox name="txtPMax6" location="173,44" size="62,20" />
+          <textbox name="txtPMax7" location="173,66" size="62,20" />
+          <textbox name="txtPMax8" location="173,89" size="62,20" />
+          <textbox name="txtP5" location="246,22" size="62,20" />
+          <textbox name="txtP6" location="246,45" size="62,20" />
+          <textbox name="txtP7" location="246,67" size="62,20" />
+          <textbox name="txtP8" location="246,89" size="62,20" />
+        </tabpage>
+        <!--参数9-12-->
+        <tabpage name="TabPage3" backcolor="empty" text="参数9-12" headersize="80,20">
+          <label name="Label24" location="29,1" size="33,21" text="参数" />
+          <label name="Label25" location="100,1" size="34,21" text="最小" />
+          <label name="Label26" location="174,0" size="30,20" text="最大" />
+          <label name="Label27" location="245,0" size="35,20" text="缺省" />
+          <label name="Label28" location="10,21" size="23,20" text="9" />
+          <label name="Label29" location="10,45" size="20,20" text="10" />
+          <label name="Label30" location="10,67" size="24,20" text="11" />
+          <label name="Label31" location="10,88" size="19,20" text="12" />
+          <textbox name="txtPN9" location="29,22" size="62,20" />
+          <textbox name="txtPN10" location="29,44" size="62,20" />
+          <textbox name="txtPN11" location="29,66" size="62,20" />
+          <textbox name="txtPN12" location="29,88" size="62,20" />
+          <textbox name="txtPMin9" location="100,22" size="62,20" />
+          <textbox name="txtPMin10" location="100,44" size="62,20" />
+          <textbox name="txtPMin11" location="100,66" size="62,20" />
+          <textbox name="txtPMin12" location="100,89" size="62,20" />
+          <textbox name="txtPMax9" location="173,22" size="62,20" />
+          <textbox name="txtPMax10" location="173,44" size="62,20" />
+          <textbox name="txtPMax11" location="173,66" size="62,20" />
+          <textbox name="txtPMax12" location="173,89" size="62,20" />
+          <textbox name="txtP9" location="246,22" size="62,20" />
+          <textbox name="txtP10" location="246,45" size="62,20" />
+          <textbox name="txtP11" location="246,67" size="62,20" />
+          <textbox name="txtP12" location="246,89" size="62,20" />
+        </tabpage>
+        <!--参数13-16-->
+        <tabpage name="TabPage4" backcolor="empty" text="参数13-16" headersize="80,20">
+          <label name="Label32" location="29,1" size="33,21" text="参数" />
+          <label name="Label33" location="100,1" size="34,21" text="最小" />
+          <label name="Label34" location="174,0" size="30,20" text="最大" />
+          <label name="Label35" location="245,0" size="35,20" text="缺省" />
+          <label name="Label36" location="10,21" size="23,20" text="13" />
+          <label name="Label37" location="10,45" size="20,20" text="14" />
+          <label name="Label38" location="10,67" size="24,20" text="15" />
+          <label name="Label39" location="10,88" size="19,20" text="16" />
+          <textbox name="txtPN13" location="29,22" size="62,20" />
+          <textbox name="txtPN14" location="29,44" size="62,20" />
+          <textbox name="txtPN15" location="29,66" size="62,20" />
+          <textbox name="txtPN16" location="29,88" size="62,20" />
+          <textbox name="txtPMin13" location="100,22" size="62,20" />
+          <textbox name="txtPMin14" location="100,44" size="62,20" />
+          <textbox name="txtPMin15" location="100,66" size="62,20" />
+          <textbox name="txtPMin16" location="100,89" size="62,20" />
+          <textbox name="txtPMax13" location="173,22" size="62,20" />
+          <textbox name="txtPMax14" location="173,44" size="62,20" />
+          <textbox name="txtPMax15" location="173,66" size="62,20" />
+          <textbox name="txtPMax16" location="173,89" size="62,20" />
+          <textbox name="txtP13" location="246,22" size="62,20" />
+          <textbox name="txtP14" location="246,45" size="62,20" />
+          <textbox name="txtP15" location="246,67" size="62,20" />
+          <textbox name="txtP16" location="246,89" size="62,20" />
+        </tabpage>
+      </tabcontrol>
+      <label name="Label3" location="375,102" size="264,20" text="坐标线位置，最多6个，用分号分隔。" />
+      <!--坐标线位置文本框-->
+      <textbox name="txtCoordinate" location="375,130" size="385,20" />
+      <label name="Label5" location="374,162" size="258,20" text="特殊坐标线位置，最多4个，用分号分隔。" />
+      <!--特殊坐标线位置文本框-->
+      <textbox name="txtSpecialCoordinate" location="375,188" size="383,20" />
+      <!--公式文本框-->
+      <textbox name="txtText" font="SimSun,14" location="23,234" multiline="true" showvscrollbar="true" size="735,172" wordwrap="true" />
+      <!--指标列表树-->
+      <tree name="tvList" autoellipsis="true" headervisible="false" location="-195,30" size="200,410">
+        <columns>
+          <column name="colCategory" text="类别" width="0" />
+          <column name="colIndicator" text="指标" width="200" />
+        </columns>
+        <nodes>
+          <node text="常用指标" font="SimSun,14,Bold" />
+          <node text="大势型" font="SimSun,14,Bold" />
+          <node text="超买超卖型" font="SimSun,14,Bold" />
+          <node text="趋势型" font="SimSun,14,Bold" />
+          <node text="能量型" font="SimSun,14,Bold" />
+          <node text="成交量型" font="SimSun,14,Bold" />
+          <node text="均线型" font="SimSun,14,Bold" />
+          <node text="图表型" font="SimSun,14,Bold" />
+          <node text="路径型" font="SimSun,14,Bold" />
+          <node text="停损型" font="SimSun,14,Bold" />
+          <node text="其他类型" font="SimSun,14,Bold" />
+        </nodes>
+      </tree>
+    </usercontrol>
+  </body>
+</html>

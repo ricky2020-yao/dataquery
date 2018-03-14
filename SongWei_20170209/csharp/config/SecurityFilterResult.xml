@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+  </head>
+  <body>
+    <!--条件选股窗体-->
+    <usercontrol cid="windowex"  name="windowSFR" canresize="true" size="800,500" location="0,0" text="条件选股">
+      <grid name="gridFilterResult" backcolor="150,0,0,0" gridlinecolor="empty" font="Simsun,14" location="8,28" size="784,464" Anchor="left,top,right,bottom">
+        <columns>
+          <column name="colNo" frozen="true" text="序号" textalign="middleright" width="50"/>
+          <column name="colName" frozen="true" text="股票名称" textalign="middleleft" width="80"/>
+          <column name="colClose" frozen="true" text="成交价" textalign="middleright" width="60"/>
+          <column name="colDiff" text="涨跌" textalign="middleright" width="60"/>
+          <column name="colVolume" text="总手" textalign="middleright" width="100"/>
+          <column name="colHigh" text="最高价" textalign="middleright" width="60"/>
+          <column name="colLow" text="最低价" textalign="middleright" width="60"/>
+          <column name="colBuy" text="买入价" textalign="middleright" width="60"/>
+          <column name="colSell" text="卖出价" textalign="middleright" width="60"/>
+          <column name="colDiffRange" text="涨跌幅%" textalign="middleright" width="60"/>
+          <column name="colOpen" text="今开盘" textalign="middleright" width="60"/>
+          <column name="colCode" text="代码" textalign="middleright" />
+          <column name="colLastClose" text="昨收盘" textalign="middleright" width="60"/>
+          <column name="colAmount" text="总金额" textalign="middleright" width="100"/>
+        </columns>
+      </grid>
+    </usercontrol>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+  </head>
+  <body>
+    <!--沙盘推演窗体-->
+    <usercontrol cid="windowex" name="windowSB" size="462,260" text="沙盘推演" location="0,0">
+      <label name="Label" location="24,30" size="44,20" text="日期：" />
+      <!--日期标签-->
+      <label name="lblDate" location="74,30" size="164,20" text="" />
+      <!--开盘价标签-->
+      <label name="lblOpen" location="24,60" size="44,20" text="开盘价：" />
+      <!--开盘价文本框-->
+      <spin name="txtOpen" digit="2" maximum="1000000" step="0.01" location="74,60" size="100,20" />
+      <!--收盘价标签-->
+      <label name="lblClose" location="24,89" size="44,20" text="收盘价：" />
+      <!--收盘价文本框-->
+      <spin name="txtClose" digit="2" maximum="1000000" text="0.01" location="74,90" size="100,20" />
+      <!--最高价标签-->
+      <label name="lblHigh" location="24,121" size="44,20" text="最高价：" />
+      <!--最高价文本框-->
+      <spin name="txtHigh" digit="2" maximum="1000000" step="0.01" location="74,121" size="100,20" />
+      <!--最低价标签-->
+      <label name="lblLow" location="24,152" size="44,20" text="最低价：" />
+      <!--最低价文本框-->
+      <spin name="txtLow" digit="2" maximum="1000000" step="0.01" location="74,152" size="100,20" />
+      <!--成交量标签-->
+      <label name="lblVolume" location="24,182" size="44,20" text="成交量：" />
+      <!--成交量文本框-->
+      <spin name="txtVolume" maximum="10000000000000" step="1" location="74,182" size="100,20" />
+      <!--成交额标签-->
+      <label name="lblAmount" location="24,212" size="44,20" text="成交额：" />
+      <!--成交额文本框-->
+      <spin name="txtAmount" maximum="10000000000000" step="1" location="74,213" size="100,20" />
+      <!--下一条数据按钮-->
+      <usercontrol cid="ribbonbutton" name="btnNext" location="190,60" size="87,23" text="下一个数据" />
+      <!--删除按钮-->
+      <usercontrol cid="ribbonbutton" name="btnDelete" location="190,121" size="87,23" text="删除" />
+      <!--添加按钮-->
+      <usercontrol cid="ribbonbutton" name="btnAdd" location="190,91" size="87,23" text="添加" />
+    </usercontrol>
+  </body>
+</html>

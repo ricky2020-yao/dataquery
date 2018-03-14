@@ -1,0 +1,226 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{157AD554-6336-41A5-93B7-0185DED74460}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>piratecat</RootNamespace>
+    <AssemblyName>piratecat_net</AssemblyName>
+    <ApplicationIcon>oldwhite.ico</ApplicationIcon>
+    <StartupObject>
+    </StartupObject>
+    <TargetZone>LocalIntranet</TargetZone>
+    <GenerateManifests>false</GenerateManifests>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <SignManifests>false</SignManifests>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <ManifestCertificateThumbprint>134E1B1FBB0AE9640EC6AA616F2517D41032AECE</ManifestCertificateThumbprint>
+    <ManifestKeyFile>piratecat.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\csharp\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\csharp\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="owchart_net, Version=1.0.0.2, Culture=neutral, PublicKeyToken=1b1d150b70585e67, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="owclient_net, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="owxmlui_net, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1b1d150b70585e67, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite, Version=1.0.65.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\Chart\Service\ConnectService.cs" />
+    <Compile Include="Controls\Chart\Service\IndicatorLayoutServiceEx.cs" />
+    <Compile Include="Controls\Chart\Service\IndicatorServiceEx.cs" />
+    <Compile Include="Controls\Chart\Service\SecurityDataHelper.cs" />
+    <Compile Include="Controls\Chart\Service\SecurityFilterTask.cs" />
+    <Compile Include="Controls\Chart\Service\SecurityFilterServiceEx.cs" />
+    <Compile Include="Controls\Chart\Service\ChatServiceEx.cs" />
+    <Compile Include="Controls\Chart\Service\ServerService.cs" />
+    <Compile Include="Controls\Chart\Service\UserCookieService.cs" />
+    <Compile Include="Controls\Chart\Service\UserSessionServiceEx.cs" />
+    <Compile Include="Controls\Chart\Service\MacroServiceEx.cs" />
+    <Compile Include="Controls\Chart\Service\ProxyService.cs" />
+    <Compile Include="Controls\Chart\UI\BarrageDiv.cs" />
+    <Compile Include="Controls\Chart\UI\IndicatorData.cs" />
+    <Compile Include="Controls\Chart\UI\UIXmlEx.cs" />
+    <Compile Include="Controls\Chart\Service\DataCenter.cs" />
+    <Compile Include="Controls\Chart\UI\ChatWindow.cs" />
+    <Compile Include="Controls\Chart\UI\ConnectWindow.cs" />
+    <Compile Include="Controls\Chart\UI\GdiPaintEx.cs" />
+    <Compile Include="Controls\Chart\UI\GdiPlusPaintEx.cs" />
+    <Compile Include="Controls\Chart\UI\FloatDiv.cs" />
+    <Compile Include="Controls\Chart\UI\IndexDiv.cs" />
+    <Compile Include="Controls\Chart\UI\LayoutScaleDiv.cs" />
+    <Compile Include="Controls\Chart\UI\IndicatorList.cs" />
+    <Compile Include="Controls\Chart\UI\LoginWindow.cs" />
+    <Compile Include="Controls\Chart\UI\OwChart.cs">
+    </Compile>
+    <Compile Include="Controls\Chart\UI\CDraw.cs" />
+    <Compile Include="Controls\Chart\UI\LatestDiv.cs" />
+    <Compile Include="Controls\Chart\UI\SandBoxWindow.cs" />
+    <Compile Include="Controls\Chart\UI\SearchDiv.cs" />
+    <Compile Include="Controls\Chart\Service\SecurityServiceEx.cs" />
+    <Compile Include="Controls\Chart\UI\SecurityFilterList.cs" />
+    <Compile Include="Controls\Chart\UI\SecurityFilterResult.cs" />
+    <Compile Include="Controls\Chart\UI\SecurityList.cs" />
+    <Compile Include="Controls\Chart\UI\Test\MacroDiv.cs" />
+    <Compile Include="Controls\Chart\UI\UserSecurityList.cs" />
+    <Compile Include="Controls\Chart\Service\UserSecurityServiceEx.cs" />
+    <Compile Include="Controls\Chart\UI\WindowEx.cs" />
+    <Compile Include="Controls\Chart\UI\IndicatorLayoutList.cs" />
+    <Compile Include="Controls\Chart\UI\ParametersWindow.cs" />
+    <Compile Include="Controls\Chart\UI\WinformControlHostEx.cs" />
+    <Compile Include="Controls\Chart\UI\MacroList.cs" />
+    <Compile Include="Controls\Chart\UI\UserSecurityListT2.cs" />
+    <Compile Include="Controls\EatSnake\Battle.cs" />
+    <Compile Include="Controls\EatSnake\Food.cs" />
+    <Compile Include="Controls\EatSnake\GameState.cs" />
+    <Compile Include="Controls\EatSnake\Play.cs" />
+    <Compile Include="Controls\EatSnake\SnakeBody.cs" />
+    <Compile Include="Controls\EatSnake\SnakeDirection.cs" />
+    <Compile Include="Controls\GannSquare\BolsterOrStress.cs" />
+    <Compile Include="Controls\GannSquare\GannSquare.cs" />
+    <Compile Include="Controls\GannSquare\SquareCell.cs" />
+    <Compile Include="Controls\GannSquare\SquareCellStyle.cs" />
+    <Compile Include="Controls\GannSquare\SquareStyle.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Controls\Chart\UI\RibbonButton.cs" />
+    <Compile Include="Controls\Chart\UI\Sky.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="config\ChatWindow.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="config\ConnectWindow.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="config\IndicatorList.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="config\LoginWindow.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="config\MacroList.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="config\MainFrame.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="config\SandBoxWindow.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="config\SecurityFilterList.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="config\SecurityFilterResult.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="config\UserSecurityList.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="config\SecurityList.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="config\IndicatorLayoutList.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="config\ParametersWindow.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="oldwhite.ico" />
+    <BaseApplicationManifest Include="Properties\app.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="piratecat_net.exe.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+  </head>
+  <body>
+    <!--条件选股窗体-->
+    <usercontrol cid="windowex"  name="windowSF" size="812,517" text="云指标选股" location="0,0">
+      <splitlayoutdiv name="layoutMain" candragsplitter="true" dock="fill" backcolor="empty" margin="7,27,7,7" splitterposition="150,0,155,484">
+        <!--模板列表-->
+        <grid name="gridTemplates" autoellipsis="true" backcolor="empty" gridlinecolor="empty" headervisible="false" showhscrollbar="false" size="200,454">
+          <columns>
+            <column name="colTemplateID" text="ID" width="0" />
+            <column name="colTemplateName" text="名称" width="812" />
+          </columns>
+        </grid>
+        <div name="divTemplate" backcolor="empty">
+          <label name="Label3" location="256,142" size="100,20" />
+          <label name="Label" location="18,28" size="70,20" text="模板名称：" />
+          <!--模板名称文本框-->
+          <textbox name="txtName" location="90,29" size="226,20" />
+          <groupbox name="GroupBox3" backcolor="empty" location="17,60" size="617,266" text="公式编辑：">
+            <label name="Label2" location="13,20" size="100,20" text="指标公式：">
+            </label>
+            <!--指标内容文本框-->
+            <textbox name="txtIndicator" location="14,42" multiline="true" showvscrollbar="true" size="589,122" wordwrap="true" />
+            <label name="Label4" location="15,168" size="100,20" text="指标参数：" />
+            <!--指标参数文本框-->
+            <textbox name="txtParameters" location="15,189" multiline="true" showvscrollbar="true" size="587,46" wordwrap="true" />
+            <!--选择公式-->
+            <usercontrol cid="ribbonbutton" name="btnSelectIndicator" location="468,239" size="134,20" text="从公式库中选择..." />
+          </groupbox>
+          <label name="Label5" location="17,365" size="70,20" text="过滤条件：" />
+          <label name="Label6" location="18,335" size="72,20" text="选择自选股：" />
+          <!--编辑股票按钮-->
+          <usercontrol cid="ribbonbutton" name="btnSelectSecurities" location="99,337" size="100,20" text="选择股票..." />
+          <label name="Label7" location="218,337" size="70,20" text="计算周期：" />
+          <!--选择周期-->
+          <combobox name="cbCycle" location="284,337" size="100,20" selectedindex="5">
+            <item text="1分钟线" value="1"/>
+            <item text="5分钟线" value="5"/>
+            <item text="15分钟线" value="15"/>
+            <item text="30分钟线" value="30"/>
+            <item text="60分钟线" value="60"/>
+            <item text="日线" value="1440"/>
+            <item text="周线" value="10080"/>
+            <item text="月线" value="43200"/>
+          </combobox>
+          <label name="Label8" location="400,337" size="70,20" text="复权方式：" />
+          <!--复权方式-->
+          <combobox name="cbSubscription" location="470,337" size="100,20" selectedindex="1">
+            <item text="不复权"/>
+            <item text="前复权"/>
+            <item text="后复权"/>
+          </combobox>
+          <!--执行间隔文本框-->
+          <!--过滤条件文本框-->
+          <textbox name="txtFilter" location="18,388" multiline="true" showvscrollbar="true" size="614,54" wordwrap="true" />
+          <!--新建按钮-->
+          <usercontrol cid="ribbonbutton" name="btnCreate" location="321,450" size="100,20" text="新建模板" />
+          <!--删除按钮-->
+          <usercontrol cid="ribbonbutton" name="btnDelete" enabled="false" location="531,450" size="100,20" text="删除" />
+          <!--运行按钮-->
+          <usercontrol cid="ribbonbutton" name="btnRun" enabled="false" location="18,450" size="100,20" text="运行" />
+          <!--查看按钮-->
+          <usercontrol cid="ribbonbutton" name="btnWatch" enabled="false" location="127,450" size="100,20" text="查看" />
+          <!--保存按钮-->
+          <usercontrol cid="ribbonbutton" name="btnSave" enabled="false" location="427,450" size="100,20" text="保存" />
+        </div>
+      </splitlayoutdiv>
+    </usercontrol>
+  </body>
+</html>

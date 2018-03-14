@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+  </head>
+  <body>
+    <!--宏管理窗体-->
+    <usercontrol cid="windowex" name="windowMacro" size="602,531" text="命令管理" location="0,0">
+      <splitlayoutdiv name="layoutMain" candragsplitter="true" dock="fill" backcolor="empty" margin="7,27,7,7" splitterposition="150,0,155,484">
+        <!--宏列表-->
+        <grid name="gridMacros" autoellipsis="true" backcolor="empty" gridlinecolor="empty" headervisible="false" showhscrollbar="false" size="200,454">
+          <columns>
+            <column name="colMacroID" text="ID" width="0" />
+            <column name="colMacroName" text="名称" width="812" />
+          </columns>
+        </grid>
+        <div name="divLayout" backcolor="empty">
+          <!--新建按钮-->
+          <usercontrol cid="ribbonbutton" name="btnCreate" location="16,468" size="100,20" text="新建" />
+          <!--测试按钮-->
+          <usercontrol cid="ribbonbutton" name="btnTest" location="119,468" size="100,20" text="测试" />
+          <!--删除按钮-->
+          <usercontrol cid="ribbonbutton" name="btnDelete" enabled="false" location="325,468" size="100,20" text="删除" />
+          <!--保存按钮-->
+          <usercontrol cid="ribbonbutton" name="btnSave" enabled="false" location="222,468" size="100,20" text="保存" />
+          <!--宏名称标签-->
+          <label name="lblMacroName" location="7,8" size="44,20" Text="名称：" />
+          <!--宏名称-->
+          <textbox name="txtMacroName" location="64,8" size="276,19" />
+          <!--宏描述标签-->
+          <label name="lblMacroDescription" text="描述：" location="7,41" size="53,20" />
+          <!--宏描述文本框-->
+          <textbox name="txtMacroDescription" location="64,41" size="276,20" />
+          <!--宏脚本标签-->
+          <label name="lblMacroScript" text="运行脚本：" location="8,75" size="100,19" />
+          <!--宏脚本文本框-->
+          <textbox name="txtMacroScript" location="6,101" multiline="true" size="419,153" wordwrap="true" />
+          <!--时间跨度标签-->
+          <label name="lblInterval" text="时间跨度：" location="11,405" size="72,20" />
+          <!--时间跨度输入框-->
+          <spin name="spinInterval" location="84,405" maximum="1000000000" size="100,20" />
+          <!--冷却时间标签-->
+          <label name="lblCD" text="冷却时间：" location="246,405" size="63,20" />
+          <!--冷却时间输出框-->
+          <spin name="spinCD" location="320,405" maximum="1000000000" size="100,20" />
+          <!--图标标签-->
+          <label name="lblIcon" text="图标：" location="6,261" size="100,20" />
+          <!--图标表格-->
+          <grid name="gridIcons" backcolor="empty" gridlinecolor="empty" headervisible="false" location="6,284" selectionmode="selectcell" size="400,112">
+            <columns>
+              <column name="colI1" text="colI1" width="64" />
+              <column name="colI2" text="colI2" width="64" />
+              <column name="colI3" text="colI3" width="64" />
+              <column name="colI4" text="colI4" width="64" />
+              <column name="colI5" text="colI5" width="64" />
+              <column name="colI6" text="colI6" width="64" />
+            </columns>
+          </grid>
+          <!--图标层-->
+          <div name="divIcon" location="357,10" size="59,59" />
+          <!--运行方式标签-->
+          <label name="Label" text="运行方式：" location="10,435" size="147,23" />
+          <!--运行方式下拉框-->
+          <combobox name="cbType" location="83,436" size="335,20" selectedindex="0">
+            <item text="主线程，不加载本地数据" />
+            <item text="主线程，加载本地数据" />
+            <item text="多线程，不加载本地数据" />
+            <item text="多线程，加载本地数据" />
+          </combobox>
+        </div>
+      </splitlayoutdiv>
+    </usercontrol>
+  </body>
+</html>
