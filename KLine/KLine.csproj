@@ -1,0 +1,209 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{237FB333-FAFF-44C4-9F3E-B43DD8A27591}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KLine</RootNamespace>
+    <AssemblyName>KLine</AssemblyName>
+    <ApplicationIcon>oldwhite.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="owchart_net, Version=1.0.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="owxmlui_net, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite, Version=1.0.65.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base\Binary.cs" />
+    <Compile Include="Base\CFile.cs" />
+    <Compile Include="Base\CStr.cs" />
+    <Compile Include="BugHoleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BugHoleForm.designer.cs">
+      <DependentUpon>BugHoleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MirroForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MirroForm.Designer.cs">
+      <DependentUpon>MirroForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\CMathLib.cs" />
+    <Compile Include="Product\Client\BaseService.cs" />
+    <Compile Include="Product\Client\ChatService.cs" />
+    <Compile Include="Product\Client\EventService.cs" />
+    <Compile Include="Product\Client\HttpGetService.cs" />
+    <Compile Include="Product\Client\HttpPostService.cs" />
+    <Compile Include="Product\Client\LoginService.cs" />
+    <Compile Include="Product\Client\Security.cs" />
+    <Compile Include="Product\Client\UserSessionService.cs" />
+    <Compile Include="Product\Script\CFunctionAjax.cs" />
+    <Compile Include="Product\Script\CFunctionBase.cs" />
+    <Compile Include="Product\Script\CFunctionDataSource.cs" />
+    <Compile Include="Product\Script\CFunctionEx.cs" />
+    <Compile Include="Product\Script\CFunctionUI.cs" />
+    <Compile Include="Product\Script\CFunctionWin.cs" />
+    <Compile Include="Product\Script\GaiaScript.cs" />
+    <Compile Include="Product\Service\ChatServiceEx.cs" />
+    <Compile Include="Product\Service\ConnectService.cs" />
+    <Compile Include="Product\Service\DataCenter.cs" />
+    <Compile Include="Product\Service\IndicatorLayoutService.cs" />
+    <Compile Include="Product\Service\IndicatorLayoutServiceEx.cs" />
+    <Compile Include="Product\Service\IndicatorService.cs" />
+    <Compile Include="Product\Service\IndicatorServiceEx.cs" />
+    <Compile Include="Product\Service\MacroService.cs" />
+    <Compile Include="Product\Service\MacroServiceEx.cs" />
+    <Compile Include="Product\Service\ProxyService.cs" />
+    <Compile Include="Product\Service\QuoteService.cs" />
+    <Compile Include="Product\Service\SecurityDataHelper.cs" />
+    <Compile Include="Product\Service\SecurityFilterService.cs" />
+    <Compile Include="Product\Service\SecurityFilterServiceEx.cs" />
+    <Compile Include="Product\Service\SecurityFilterTask.cs" />
+    <Compile Include="Product\Service\SecurityService.cs" />
+    <Compile Include="Product\Service\SecurityServiceEx.cs" />
+    <Compile Include="Product\Service\ServerService.cs" />
+    <Compile Include="Product\Service\UserCookieService.cs" />
+    <Compile Include="Product\Service\UserSecurityService.cs" />
+    <Compile Include="Product\Service\UserSecurityServiceEx.cs" />
+    <Compile Include="Product\Service\UserSessionServiceEx.cs" />
+    <Compile Include="Product\UI\BarrageDiv.cs" />
+    <Compile Include="Product\UI\CDraw.cs" />
+    <Compile Include="Product\UI\ChatWindow.cs" />
+    <Compile Include="Product\UI\ConnectWindow.cs" />
+    <Compile Include="Product\UI\EatSnake\Battle.cs" />
+    <Compile Include="Product\UI\EatSnake\Food.cs" />
+    <Compile Include="Product\UI\EatSnake\GameState.cs" />
+    <Compile Include="Product\UI\EatSnake\Play.cs" />
+    <Compile Include="Product\UI\EatSnake\SnakeBody.cs" />
+    <Compile Include="Product\UI\EatSnake\SnakeDirection.cs" />
+    <Compile Include="Product\UI\FloatDiv.cs" />
+    <Compile Include="Product\UI\GannSquare\BolsterOrStress.cs" />
+    <Compile Include="Product\UI\GannSquare\GannSquare.cs" />
+    <Compile Include="Product\UI\GannSquare\SquareCell.cs" />
+    <Compile Include="Product\UI\GannSquare\SquareCellStyle.cs" />
+    <Compile Include="Product\UI\GannSquare\SquareStyle.cs" />
+    <Compile Include="Product\UI\GdiPaintEx.cs" />
+    <Compile Include="Product\UI\GdiPlusPaintEx.cs" />
+    <Compile Include="Product\UI\IndexDiv.cs" />
+    <Compile Include="Product\UI\IndicatorData.cs" />
+    <Compile Include="Product\UI\IndicatorLayoutList.cs" />
+    <Compile Include="Product\UI\IndicatorList.cs" />
+    <Compile Include="Product\UI\LatestDiv.cs" />
+    <Compile Include="Product\UI\LayoutScaleDiv.cs" />
+    <Compile Include="Product\UI\LoginWindow.cs" />
+    <Compile Include="Product\UI\MacroList.cs" />
+    <Compile Include="Product\UI\MainFrame.cs" />
+    <Compile Include="Product\UI\OwChart.cs" />
+    <Compile Include="Product\UI\ParametersWindow.cs" />
+    <Compile Include="Product\UI\RibbonButton.cs" />
+    <Compile Include="Product\UI\SandBoxWindow.cs" />
+    <Compile Include="Product\UI\SearchDiv.cs" />
+    <Compile Include="Product\UI\SecurityFilterList.cs" />
+    <Compile Include="Product\UI\SecurityFilterResult.cs" />
+    <Compile Include="Product\UI\SecurityList.cs" />
+    <Compile Include="Product\UI\Sky.cs" />
+    <Compile Include="Product\UI\UIXmlEx.cs" />
+    <Compile Include="Product\UI\UserSecurityList.cs" />
+    <Compile Include="Product\UI\UserSecurityListT2.cs" />
+    <Compile Include="Product\UI\WindowButton.cs" />
+    <Compile Include="Product\UI\WindowEx.cs" />
+    <Compile Include="Product\UI\WinHostEx.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BugHoleForm.resx">
+      <DependentUpon>BugHoleForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MirroForm.resx">
+      <DependentUpon>MirroForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="config\ChatWindow.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="config\ConnectWindow.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="config\LoginWindow.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="config\MainFrame.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="oldwhite.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

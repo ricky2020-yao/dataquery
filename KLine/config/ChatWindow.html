@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+    <script type="text/javascript" language="gaia">
+      {按钮点击}
+      function onclick()
+      {
+      var(sender, '', pName, '');
+      getsender(sender);
+      getproperty(pName, sender, 'name');
+      if(str.equals(pName, 'btnCancel'))
+      {
+      closewindow();
+      }
+      }
+    </script>
+  </head>
+  <body>
+    <!--聊天窗体-->
+    <input type="usercontrol" cid="windowex" name="windowChat" size="500,127" location="0,0" text="弹幕聊天">
+      <!--内容文本框-->
+      <input type="text" name="txtData" location="10,30" size="480,57" text="" Font="SimSun,30" Height="57" LineHeight="57" />
+      <!--发送按钮-->
+      <input type="usercontrol" cid="ribbonbutton" name="btnSend" location="323,97" size="79,20" Text="发送" />
+      <!--取消按钮-->
+      <input type="usercontrol" cid="ribbonbutton" name="btnCancel" location="411,97" size="79,20" Text="取消" onclick="onclick();"/>
+    </input>
+  </body>
+</html>

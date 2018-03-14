@@ -1,0 +1,15 @@
+D:\Project\KLine\bin\Debug\KLine.exe.config
+D:\Project\KLine\bin\Debug\config\ChatWindow.html
+D:\Project\KLine\bin\Debug\config\ConnectWindow.html
+D:\Project\KLine\bin\Debug\config\LoginWindow.html
+D:\Project\KLine\bin\Debug\config\MainFrame.html
+D:\Project\KLine\bin\Debug\KLine.exe
+D:\Project\KLine\bin\Debug\KLine.pdb
+D:\Project\KLine\obj\Debug\ResolveAssemblyReference.cache
+D:\Project\KLine\obj\Debug\KLine.BugHoleForm.resources
+D:\Project\KLine\obj\Debug\KLine.MainForm.resources
+D:\Project\KLine\obj\Debug\KLine.MirroForm.resources
+D:\Project\KLine\obj\Debug\KLine.Properties.Resources.resources
+D:\Project\KLine\obj\Debug\KLine.csproj.GenerateResource.Cache
+D:\Project\KLine\obj\Debug\KLine.exe
+D:\Project\KLine\obj\Debug\KLine.pdb

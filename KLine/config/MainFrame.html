@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html>
+  <head>
+  </head>
+  <body>
+    <div name="newDiv" size="600,500" location="0,0" dock="Fill">
+      <div type="splitlayout" name="divMain" backcolor="empty" layoutstyle="bottomtotop" height="100%" dock="fill" size="400,400" splitterposition="0,378,400,378">
+        <!--指数栏-->
+        <div name="divIndex"/>
+        <div type="tabcontrol" name="TabControl" text="TabControl" location="0,0" size="200,200" dock="Fill" selectedindex="0">
+          <div name="tabContactList" text="合约列表" type="tabpage">
+            <table name="gridLatestData" text="Grid" location="0,0" dock="Fill" size="1433,789"  headerheight="25">
+              <tr>
+                <th name="colQ33" columntype="text" text="序号" width="80" />
+                <th name="colQ1" columntype="text" text="股票代码" width="80" />
+                <th name="colQ2" columntype="text" text="股票名称" width="100" />
+                <th name="colQ3" columntype="double" cellalign="right" text="最新价" width="60" />
+                <th name="colQ18" columntype="percent" cellalign="right" text="涨跌幅" width="60" />
+                <th name="colQ4" columntype="double" cellalign="right" text="涨跌" width="60" />
+                <th name="colQ5" columntype="int" cellalign="right" text="总手" width="60" />
+                <th name="colQ6" columntype="int" cellalign="right" text="现手" width="60" />
+                <th name="colQ7" columntype="double" cellalign="right" text="买入价" width="60" />
+                <th name="colQ8" columntype="double" cellalign="right" text="卖出价" width="60" />
+                <th name="colQ9" columntype="percent" cellalign="right" text="换手率" width="60" />
+                <th name="colQ10" columntype="int" cellalign="right" text="成交量" width="60" />
+                <th name="colQ13" columntype="double" cellalign="right" text="最高价" width="60" />
+                <th name="colQ14" columntype="double" cellalign="right" text="最低价" width="60" />
+                <th name="colQ15" columntype="double" cellalign="right" text="开盘价" width="60" />
+                <th name="colQ16" columntype="double" cellalign="right" text="昨收价" width="60" />
+                <th name="colQ17" columntype="double" cellalign="right" text="均价" width="60" />
+                <th name="colQ19" columntype="double" cellalign="right" text="内盘" width="60" />
+                <th name="colQ20" columntype="double" cellalign="right" text="外盘" width="100" />
+                <th name="colQ11" columntype="double" cellalign="right" text="涨停价" width="60" />
+                <th name="colQ12" columntype="double" cellalign="right" text="跌停价" width="60" />
+              </tr>
+            </table>
+          </div>
+          <div name="tabKLine" text="K线" type="tabpage" dock="Fill">
+            <div type="layout" name="LayoutDiv" text="LayoutDiv" location="55,62" size="200,200" layoutstyle="TopToBottom" dock="Fill" bordercolor="empty">
+              <div type="layout" layoutstyle="lefttoright" name="divTimeList" text="LayoutDiv" location="7,0" height="25" allowdragscroll="true" anchor="Left,Top" allowpreviewsevent="true" showhscrollbar="true" bordercolor="empty">
+                <input type="usercontrol" cid="ribbonbutton" width="80" text="分时" name="btnTimeShare" />
+                <input type="usercontrol" cid="ribbonbutton" width="80" text="日线" name="btnDateLine" />
+                <input type="usercontrol" cid="ribbonbutton" width="80" text="1分" name="btnOneMinutesLine" />
+                <input type="usercontrol" cid="ribbonbutton" width="80" text="3分" name="btnThreeMinutesLine" />
+                <input type="usercontrol" cid="ribbonbutton" width="80" text="5分" name="btnFiveMinutesLine" />
+                <input type="usercontrol" cid="ribbonbutton" width="80" text="10分" name="btnTenMinutesLine" />
+                <input type="usercontrol" cid="ribbonbutton" width="80" text="30分" name="btnThirtyMinutesLine" />
+                <input type="usercontrol" cid="ribbonbutton" width="80" text="60分" name="btnSixtyMinutesLine" />
+                <input type="usercontrol" cid="ribbonbutton" width="80" text="周线" name="btnWeekLine" />
+                <input type="usercontrol" cid="ribbonbutton" width="80" text="月线" name="btnMonthLine" />
+              </div>
+              <div type="splitlayout" name="chartdiv" backcolor="empty" height="100%" layoutstyle="righttoleft" size="400,378" splitterposition="150,0,150,378">
+                <!--实时报价-->
+                <input type="usercontrol" cid="latestdiv" name="divLatest" height="360"></input>
+                <!--K线图-->
+                <input type="usercontrol" cid="klinediv" name="divKLine">
+                    <!--浮动数据-->
+                    <input type="usercontrol" cid="floatdiv" name="divFloat" allowdrag="true" location="85,20" size="85,300" visible="false" />
+                </input>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
